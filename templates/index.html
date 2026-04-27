@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GNDPC – AI Help Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<canvas id="bgCanvas"></canvas>
+<div class="grid-overlay"></div>
+
+<!-- ══════════════════════════ AUTH SCREEN ══════════════════════════ -->
+<div id="authScreen">
+  <div class="auth-wrap">
+    <div class="auth-card">
+
+      <div class="brand">
+        <div class="brand-icon">🎓</div>
+        <div>
+          <div class="brand-name">GNDPC Help Desk</div>
+          <div class="brand-sub">Guru Nanak Dev Polytechnic College · Ludhiana</div>
+        </div>
+      </div>
+
+      <!-- ── LOGIN VIEW ── -->
+      <div id="loginView">
+        <div class="auth-title">Welcome Back 👋</div>
+        <div class="auth-sub">Login to access the College Help Chatbot</div>
+        <div id="loginAlert" class="alert"></div>
+
+        <div class="field">
+          <label>Name</label>
+          <div class="field-wrap">
+            <input type="text" id="l_name" placeholder="Your name" autocomplete="name"/>
+            <span class="field-icon">👤</span>
+          </div>
+        </div>
+        <div class="field">
+          <label>Role</label>
+          <div class="field-wrap">
+            <select id="l_role">
+              <option value="" disabled selected>Select your role</option>
+              <option value="student">👨‍🎓 Student</option>
+              <option value="admin">🛡️ Admin</option>
+              <option value="faculty">👨‍🏫 Faculty</option>
+            </select>
+            <span class="field-icon">🏷️</span>
+          </div>
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <div class="field-wrap">
+            <input type="password" id="l_pass" placeholder="Enter password" autocomplete="current-password"/>
+            <span class="field-icon">🔒</span>
+            <button class="pw-eye" type="button" onclick="toggleEye('l_pass',this)">👁️</button>
+          </div>
+        </div>
+
+        <button class="btn-main" id="loginBtn" onclick="doLogin()">🚀 Login to Help Desk</button>
+
+        <div class="demo-bar">
+          <p>🔑 Demo Credentials</p>
+          <span class="demo-pill" onclick="fillLogin('Student','student','student123')">👨‍🎓 Student</span>
+          <span class="demo-pill" onclick="fillLogin('Admin','admin','admin123')">🛡️ Admin</span>
+          <span class="demo-pill" onclick="fillLogin('Faculty','faculty','faculty123')">👨‍🏫 Faculty</span>
+        </div>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-txt">New here?</div>
+          <div class="divider-line"></div>
+        </div>
+        <button class="btn-ghost" onclick="switchView('signup')">✨ Create New Account</button>
+      </div>
+
+      <!-- ── SIGNUP VIEW ── -->
+      <div id="signupView" style="display:none;">
+        <div class="auth-title">Create Account ✨</div>
+        <div class="auth-sub">Register to access the College Help Chatbot</div>
+        <div id="signupAlert" class="alert"></div>
+
+        <div class="field">
+          <label>Full Name</label>
+          <div class="field-wrap">
+            <input type="text" id="s_name" placeholder="e.g. Prabhdeep Singh" autocomplete="name"/>
+            <span class="field-icon">👤</span>
+          </div>
+        </div>
+
+        <div class="row2">
+          <div class="field" style="margin-bottom:0">
+            <label>Roll Number</label>
+            <div class="field-wrap">
+              <input type="text" id="s_roll" placeholder="e.g. 2025001"/>
+              <span class="field-icon">🪪</span>
+            </div>
+          </div>
+          <div class="field" style="margin-bottom:0">
+            <label>Role</label>
+            <div class="field-wrap">
+              <select id="s_role">
+                <option value="" disabled selected>Select</option>
+                <option value="student">👨‍🎓 Student</option>
+                <option value="admin">🛡️ Admin</option>
+                <option value="faculty">👨‍🏫 Faculty</option>
+              </select>
+              <span class="field-icon">🏷️</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="height:12px"></div>
+
+        <div class="field">
+          <label>Password</label>
+          <div class="field-wrap">
+            <input type="password" id="s_pass" placeholder="Min 6 characters" oninput="checkStr(this.value)"/>
+            <span class="field-icon">🔒</span>
+            <button class="pw-eye" type="button" onclick="toggleEye('s_pass',this)">👁️</button>
+          </div>
+          <div class="strength-wrap"><div class="strength-fill" id="strFill"></div></div>
+          <div class="strength-lbl" id="strLbl"></div>
+        </div>
+        <div class="field">
+          <label>Confirm Password</label>
+          <div class="field-wrap">
+            <input type="password" id="s_conf" placeholder="Re-enter password"/>
+            <span class="field-icon">🔑</span>
+            <button class="pw-eye" type="button" onclick="toggleEye('s_conf',this)">👁️</button>
+          </div>
+        </div>
+
+        <button class="btn-main" id="signupBtn" onclick="doSignup()">🚀 Create My Account</button>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-txt">Already have an account?</div>
+          <div class="divider-line"></div>
+        </div>
+        <button class="btn-ghost" onclick="switchView('login')">← Back to Login</button>
+      </div>
+
+      <div style="text-align:center;margin-top:16px;font-size:11px;color:var(--muted);">
+        🌐 <a href="https://www.gndpoly.org" target="_blank" style="color:#64b5f6;text-decoration:none;">www.gndpoly.org</a>
+        &nbsp;·&nbsp; 📞 0161-2490654
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════ CHAT APP ══════════════════════════ -->
+<div id="chatApp">
+  <div class="shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sb-logo">
+        <div class="sb-icon">🎓</div>
+        <div>
+          <div class="sb-title">GNDPC</div>
+          <div class="sb-tagline">Help Desk AI</div>
+        </div>
+      </div>
+
+      <div class="user-card">
+        <div class="u-avatar" id="uAvatar">S</div>
+        <div>
+          <div class="u-name" id="uName">Student</div>
+          <div class="u-role" id="uRole">student</div>
+        </div>
+      </div>
+
+      <div class="sb-label">Quick Topics</div>
+      <div class="chips">
+        <button class="chip" onclick="qa('How to take admission in GNDPC?')">📋 Admission Process</button>
+        <button class="chip" onclick="qa('What is the fees structure 2025?')">💰 Fee Structure</button>
+        <button class="chip" onclick="qa('What courses are offered?')">📚 Courses Offered</button>
+        <button class="chip" onclick="qa('Tell me about hostel fees')">🏠 Hostel Fees</button>
+        <button class="chip" onclick="qa('What is LEET lateral entry?')">🎓 LEET Entry</button>
+        <button class="chip" onclick="qa('Tell me about rural quota')">🌾 Rural Quota</button>
+        <button class="chip" onclick="qa('Sikh minority reservation details')">🕌 Sikh Quota</button>
+        <button class="chip" onclick="qa('Scholarship details for students')">🏆 Scholarships</button>
+        <button class="chip" onclick="qa('Placement and training cell')">💼 Placement Cell</button>
+        <button class="chip" onclick="qa('Who is the principal?')">👩‍💼 Principal</button>
+        <button class="chip" onclick="qa('What is the contact number?')">📞 Contact Info</button>
+        <button class="chip" onclick="qa('College website links')">🌐 Website Links</button>
+        <button class="chip" onclick="qa('Tell me about managing committee')">🏛️ Administration</button>
+        <button class="chip" onclick="qa('Readmission policy')">🔄 Re-admission</button>
+      </div>
+
+      <div class="sb-links">
+        <div class="sb-label" style="margin-top:12px;">Official Links</div>
+        <a href="https://www.gndpoly.org/index.php" target="_blank" class="sb-link">🏠 Home Page</a>
+        <a href="https://www.gndpoly.org/admission.php" target="_blank" class="sb-link">📋 Admission Info</a>
+        <a href="https://www.gndpoly.org/courses.php" target="_blank" class="sb-link">📚 Courses</a>
+        <a href="https://www.gndpoly.org/Administration9.php" target="_blank" class="sb-link">🏛️ Administration</a>
+        <a href="https://www.gndpoly.org/gallery.php" target="_blank" class="sb-link">🖼️ Gallery</a>
+        <a href="https://www.gndpoly.org/sre.php" target="_blank" class="sb-link">✡️ SRE-2026</a>
+      </div>
+
+      <div class="logout-btn">
+        <button onclick="doLogout()">🚪 Logout</button>
+        <div class="sb-footer">
+          <a href="https://www.gndpoly.org" target="_blank">🌐 www.gndpoly.org</a><br>
+          📞 0161-2490654<br>
+          📧 principalgndp@gmail.com
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN PANEL -->
+    <main class="main">
+      <header class="topbar">
+        <div class="tb-left">
+          <div class="status-dot"></div>
+          <div>
+            <div class="tb-title">GNDPC Help Assistant</div>
+            <div class="tb-sub">Guru Nanak Dev Polytechnic College · Ludhiana</div>
+          </div>
+        </div>
+        <div class="tb-right">
+          <a href="https://www.gndpoly.org/admission.php" target="_blank" class="tb-link">🌐 Admission Page</a>
+          <button class="tb-logout" onclick="doLogout()">Logout</button>
+        </div>
+      </header>
+
+      <div class="chat-area" id="chatArea"></div>
+
+      <div class="input-bar">
+        <div class="input-row">
+          <input type="text" id="msgInput"
+            placeholder="Ask anything about GNDPC... (fees, courses, hostel...)"
+            autocomplete="off"/>
+          <button class="send-btn" onclick="sendMsg()" title="Send">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M22 2L11 13" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<button class="hamburger" onclick="toggleSb()">☰</button>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

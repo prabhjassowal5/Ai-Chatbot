@@ -1,0 +1,78 @@
+[
+  {
+    "patterns": ["hello", "hi", "hey", "namaste", "sat sri akal", "good morning", "good afternoon"],
+    "response": "\u0a38\u0a24 \u0a38\u0a4d\u0a30\u0a40 \u0a05\u0a15\u0a3e\u0a32! \ud83d\udc4b Welcome to GNDPC Help Desk!<br>How can I assist you today? Ask me anything or use the quick buttons on the left."
+  },
+  {
+    "patterns": ["admission", "how to apply", "apply for", "admission process", "get admission", "admission 2025"],
+    "response": "\ud83d\udccb <strong>ADMISSION PROCESS 2025-26:</strong><br><br>\u2705 Based on 10th class merit marks.<br>\u2705 70% Rural Quota for rural Punjab students.<br>\u2705 50% Sikh Minority Quota (SRE test by SGPC required).<br><br><strong>Steps:</strong><br>1\ufe0f\u20e3 Visit: <a href='https://www.gndpoly.org/admission.php' target='_blank' style='color:#64b5f6'>gndpoly.org/admission.php</a><br>2\ufe0f\u20e3 Punjab Board counseling at punjabtechced.com<br>3\ufe0f\u20e3 Fill online form & upload documents<br>4\ufe0f\u20e3 Pay admission fee at counseling<br><br>\ud83d\udcde <strong>0161-2490654 | 9815600649</strong>"
+  },
+  {
+    "patterns": ["fee", "fees", "how much", "cost", "fee structure", "fee detail"],
+    "response": "\ud83d\udcb0 <strong>FEE STRUCTURE 2025-26:</strong><br><br>\ud83d\udd35 General Category: <strong>\u20b921,670/year</strong><br>\ud83d\udfe2 SC/ST Category: <strong>\u20b94,503/year</strong> (income &lt; \u20b92.5L)<br>\ud83d\udfe1 Gill Donor / FW: <strong>\u20b910,670/year</strong><br>\ud83d\udd34 LEET General: <strong>\u20b922,370/year</strong><br><br>\ud83d\udccc Includes: Tuition, Dev Fund, Student Fund, Security, Exam Fee<br>\ud83d\udccc SC/ST pay only \u20b91,133 at admission if income &lt; \u20b92.5 lakh<br><br>\ud83d\udcde <strong>0161-2490654</strong>"
+  },
+  {
+    "patterns": ["hostel", "accommodation", "hostel fee", "room rent", "hostel room", "stay"],
+    "response": "\ud83c\udfe0 <strong>HOSTEL FEES 2025-26:</strong><br><br>\ud83d\udecc 3-Seater Room: <strong>\u20b936,000/year</strong><br>\ud83d\udecc Single Room: <strong>\u20b943,700/year</strong><br>\u2744\ufe0f Room with AC: <strong>\u20b949,700/year</strong><br>\ud83d\udec1 AC + Attached Bath: <strong>\u20b951,100/year</strong><br>\ud83d\udebf Without AC + Attached Bath: <strong>\u20b937,400/year</strong><br><br>\ud83d\udccc Includes mess service (\u20b916,800)<br>\ud83d\udccc New students: \u20b96,000 refundable mess security<br>\ud83d\udccc AC electricity charged separately<br><br>\ud83d\udcde Hostel Office: <strong>0161-2504053 | 94635-30591</strong>"
+  },
+  {
+    "patterns": ["course", "courses", "diploma", "branch", "program", "what course", "list of course"],
+    "response": "\ud83d\udcda <strong>COURSES AT GNDPC:</strong><br><br><strong>Diploma Engineering (3 Years):</strong><br>\u2022 Computer Engineering<br>\u2022 Civil Engineering<br>\u2022 Electrical Engineering<br>\u2022 Electronics & Communication Engg.<br>\u2022 Mechanical Engineering<br>\u2022 Automobile Engineering<br>\u2022 Information Technology<br><br><strong>Post Diploma:</strong><br>\u2022 Automobile Engineering (1 Year)<br><br>\ud83d\udccc LEET (Lateral Entry) available for 2nd year<br>\ud83c\udf10 <a href='https://www.gndpoly.org/courses.php' target='_blank' style='color:#64b5f6'>View all courses</a>"
+  },
+  {
+    "patterns": ["leet", "lateral entry", "second year", "direct admission", "2nd year"],
+    "response": "\ud83c\udf93 <strong>LATERAL ENTRY (LEET) \u2013 2nd Year Direct Admission:</strong><br><br><strong>Eligibility</strong> (minimum 60% marks):<br>\u2705 ITI 2-year course (after 10th)<br>\u2705 10+2 Vocational in relevant branch<br>\u2705 10+2 Science stream<br>\u2705 2-year certificate from SLIET Longowal<br><br>\ud83d\udccc Admission through Punjab State Board counseling<br>\ud83c\udf10 <a href='https://punjabtechced.com' target='_blank' style='color:#64b5f6'>punjabtechced.com</a><br>\ud83d\udcb0 LEET General: \u20b922,370 | SC: \u20b94,953"
+  },
+  {
+    "patterns": ["rural quota", "rural reservation", "rural area", "70 percent"],
+    "response": "\ud83c\udf3e <strong>RURAL QUOTA (70% Seats):</strong><br><br>Qualifies if:<br>\u2705 Parents permanently reside in rural Punjab<br>\u2705 Studied minimum 3 years in a rural school<br>\u2705 Passed 5th/8th/10th from rural school<br><br>\ud83d\udccc Rural = outside Municipal Corp, Committee, NAC, Cantonment<br>\ud83d\udccc Fill Form No.11 from Board prospectus"
+  },
+  {
+    "patterns": ["sikh minority", "sre", "sgpc", "minority quota", "50 percent", "sikh reservation"],
+    "response": "\ud83d\udd4c <strong>SIKH MINORITY QUOTA (50% Seats):</strong><br><br>\u2705 50% seats reserved for Sikh minority students<br>\u2705 Must clear SRE (Sikh Religious Examination) by SGPC<br><br>\ud83c\udf10 SRE Info: <a href='http://bbsbec.ac.in/' target='_blank' style='color:#64b5f6'>bbsbec.ac.in</a><br>\ud83d\udccc Contact SGPC, Amritsar for test schedule"
+  },
+  {
+    "patterns": ["scholarship", "financial aid", "fee waiver", "free education"],
+    "response": "\ud83c\udfc6 <strong>SCHOLARSHIPS AT GNDPC:</strong><br><br>\u2705 SC/ST: Pay only \u20b91,133 if family income &lt; \u20b92.5L/year<br>\u2705 Government of Punjab reservations apply<br>\u2705 Gill Donor Category: Reduced fees<br><br>\ud83c\udf10 <a href='https://www.gndpoly.org/scholarship.php' target='_blank' style='color:#64b5f6'>Scholarship Info</a><br>\ud83d\udccc Apply within 30 days of admission<br>\ud83d\udccc Need: Income certificate, caste certificate, domicile"
+  },
+  {
+    "patterns": ["placement", "job", "campus placement", "internship", "career", "training cell"],
+    "response": "\ud83d\udcbc <strong>TRAINING & PLACEMENT CELL:</strong><br><br>Active T&P Cell connecting students with top companies.<br><br>\ud83d\udccc Incharge: S. Prabhpreet Singh<br>\ud83d\udcde 0161-249654-413 (Ext.) | 98149-94945<br><br>\ud83c\udf10 <a href='https://www.gndpoly.org/TrainingandPlacementCell8.php' target='_blank' style='color:#64b5f6'>T&P Cell Page</a>"
+  },
+  {
+    "patterns": ["contact", "phone", "email", "address", "reach", "call"],
+    "response": "\ud83d\udcde <strong>CONTACT GNDPC:</strong><br><br>\ud83d\udcf1 Phone: <strong>0161-2490654</strong><br>\ud83d\udcf1 Mobile: <strong>+91 9815600649</strong><br>\ud83d\udce7 Email: <strong>principalgndp@gmail.com</strong><br>\ud83d\udccd GNDPC Gill Park, Gill Road, Ludhiana \u2013 141006, Punjab<br><br>\ud83c\udfe2 ITI: 9914540633 | 8872130002<br>\ud83d\udd58 Mon\u2013Sat, 9 AM \u2013 5 PM"
+  },
+  {
+    "patterns": ["principal", "who is principal", "head", "sarbjit"],
+    "response": "\ud83d\udc69\u200d\ud83d\udcbc <strong>COLLEGE PRINCIPAL:</strong><br><br>\ud83c\udf93 <strong>Mrs. Sarbjit Kaur</strong><br>Principal & Dean (Academics)<br><br>\ud83d\udcde 0161-2490654 (Ext.) | 9815609649<br>\ud83d\udce7 principalgndp@gmail.com"
+  },
+  {
+    "patterns": ["administration", "managing committee", "chairman", "governing body"],
+    "response": "\ud83c\udfdb\ufe0f <strong>ADMINISTRATION:</strong><br><br><strong>Principal:</strong> Mrs. Sarbjit Kaur<br><strong>Chief Warden:</strong> S. Gurcharan Singh (94635-30591)<br><strong>T&P Incharge:</strong> S. Prabhpreet Singh (98149-94945)<br><strong>Chairman:</strong> Adv. S. Harjinder Singh Dhami<br><br>\ud83c\udf10 <a href='https://www.gndpoly.org/Administration9.php' target='_blank' style='color:#64b5f6'>Full Administration Details</a>"
+  },
+  {
+    "patterns": ["readmission", "re-admission", "dropout", "rejoining", "gap"],
+    "response": "\ud83d\udd04 <strong>RE-ADMISSION POLICY:</strong><br><br>\u2705 Dropped out students can re-apply<br>\u2705 Maximum gap: <strong>2 years</strong><br>\u2705 Re-admission at semester start<br><br>\ud83d\udccc Contact office with original documents<br>\ud83d\udcde <strong>0161-2490654</strong>"
+  },
+  {
+    "patterns": ["website", "official site", "portal", "online"],
+    "response": "\ud83c\udf10 <strong>OFFICIAL WEBSITE LINKS:</strong><br><br>\ud83c\udfe0 <a href='https://www.gndpoly.org/index.php' target='_blank' style='color:#64b5f6'>Home</a><br>\ud83d\udccb <a href='https://www.gndpoly.org/admission.php' target='_blank' style='color:#64b5f6'>Admission</a><br>\ud83d\udcda <a href='https://www.gndpoly.org/courses.php' target='_blank' style='color:#64b5f6'>Courses</a><br>\ud83c\udfdb\ufe0f <a href='https://www.gndpoly.org/Administration9.php' target='_blank' style='color:#64b5f6'>Administration</a><br>\ud83c\udfc5 <a href='https://www.gndpoly.org/sre.php' target='_blank' style='color:#64b5f6'>SRE-2026</a><br>\ud83d\udcb0 <a href='https://www.gndpoly.org/scholarship.php' target='_blank' style='color:#64b5f6'>Scholarship</a><br>\ud83c\udfc5 <a href='https://www.gndpoly.org/Placements6.php' target='_blank' style='color:#64b5f6'>Placements</a>"
+  },
+  {
+    "patterns": ["anti ragging", "ragging", "harassment", "complaint", "grievance"],
+    "response": "\ud83d\udeab <strong>ANTI-RAGGING POLICY:</strong><br><br>GNDPC has strict zero-tolerance anti-ragging measures.<br><br>\ud83c\udf10 <a href='https://www.gndpoly.org/Anti-Ragging8.php' target='_blank' style='color:#64b5f6'>Anti-Ragging Policy</a><br>\ud83d\udce0 <a href='https://www.gndpoly.org/complaint.php' target='_blank' style='color:#64b5f6'>File a Complaint</a><br><br>\u26a0\ufe0f Report ragging immediately to the Principal!"
+  },
+  {
+    "patterns": ["library", "book", "reading room", "borrow"],
+    "response": "\ud83d\udcda <strong>COLLEGE LIBRARY:</strong><br><br>Well-stocked library for all engineering branches.<br><br>\ud83c\udf10 <a href='https://www.gndpoly.org/library.php?library=home' target='_blank' style='color:#64b5f6'>Library Department</a><br>\ud83d\udccc Student ID required for borrowing<br>\ud83d\udcde <strong>0161-2490654</strong>"
+  },
+  {
+    "patterns": ["timetable", "time table", "schedule", "class timing", "lecture"],
+    "response": "\ud83d\udd58 <strong>CLASS TIMETABLE:</strong><br><br>Available on department notice boards and student portal.<br><br>\ud83d\udccc Morning Shift: <strong>8 AM \u2013 2 PM</strong><br>\ud83d\udccc Check notice board for latest updates<br>\ud83d\udcde <strong>0161-2490654</strong>"
+  },
+  {
+    "patterns": ["bye", "goodbye", "thanks", "thank you", "shukriya", "dhanyawad"],
+    "response": "\u0a27\u0a70\u0a28\u0a35\u0a3e\u0a26! Thank you for using GNDPC Help Desk \ud83d\ude4f<br>Best of luck in your studies! Feel free to ask anytime.<br>\ud83c\udf10 <a href='https://www.gndpoly.org' target='_blank' style='color:#64b5f6'>www.gndpoly.org</a>"
+  }
+]

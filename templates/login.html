@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GNDPC – Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<canvas id="bgCanvas"></canvas>
+<div class="grid-overlay"></div>
+
+<div id="authScreen" style="display:flex;">
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <div class="brand">
+        <div class="brand-icon">🎓</div>
+        <div>
+          <div class="brand-name">GNDPC Help Desk</div>
+          <div class="brand-sub">Guru Nanak Dev Polytechnic College · Ludhiana</div>
+        </div>
+      </div>
+
+      <div id="loginView">
+        <div class="auth-title">Welcome Back 👋</div>
+        <div class="auth-sub">Login to access the College Help Chatbot</div>
+        <div id="loginAlert" class="alert"></div>
+
+        <div class="field">
+          <label>Name</label>
+          <div class="field-wrap">
+            <input type="text" id="l_name" placeholder="Your name" autocomplete="name"/>
+            <span class="field-icon">👤</span>
+          </div>
+        </div>
+        <div class="field">
+          <label>Role</label>
+          <div class="field-wrap">
+            <select id="l_role">
+              <option value="" disabled selected>Select your role</option>
+              <option value="student">👨‍🎓 Student</option>
+              <option value="admin">🛡️ Admin</option>
+              <option value="faculty">👨‍🏫 Faculty</option>
+            </select>
+            <span class="field-icon">🏷️</span>
+          </div>
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <div class="field-wrap">
+            <input type="password" id="l_pass" placeholder="Enter password" autocomplete="current-password"/>
+            <span class="field-icon">🔒</span>
+            <button class="pw-eye" type="button" onclick="toggleEye('l_pass',this)">👁️</button>
+          </div>
+        </div>
+        <button class="btn-main" id="loginBtn" onclick="doLogin()">🚀 Login to Help Desk</button>
+
+        <div class="demo-bar">
+          <p>🔑 Demo Credentials</p>
+          <span class="demo-pill" onclick="fillLogin('Student','student','student123')">👨‍🎓 Student</span>
+          <span class="demo-pill" onclick="fillLogin('Admin','admin','admin123')">🛡️ Admin</span>
+          <span class="demo-pill" onclick="fillLogin('Faculty','faculty','faculty123')">👨‍🏫 Faculty</span>
+        </div>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-txt">New here?</div>
+          <div class="divider-line"></div>
+        </div>
+        <a href="/" class="btn-ghost">✨ Go to Full App</a>
+      </div>
+
+      <div style="text-align:center;margin-top:16px;font-size:11px;color:var(--muted);">
+        🌐 <a href="https://www.gndpoly.org" target="_blank" style="color:#64b5f6;text-decoration:none;">www.gndpoly.org</a>
+        &nbsp;·&nbsp; 📞 0161-2490654
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script>
+  // On login success, redirect to main app
+  const _origLaunch = window.launchApp;
+  window.launchApp = function(name, role) { window.location.href = '/'; };
+</script>
+</body>
+</html>
